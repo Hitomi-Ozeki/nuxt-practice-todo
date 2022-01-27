@@ -1,11 +1,12 @@
 <template>
-  <Tutorial />
+  <div>
+    空っぽのページ
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({
-  name: 'IndexPage'
-})
+export default class extends Vue {}
+
 </script>
