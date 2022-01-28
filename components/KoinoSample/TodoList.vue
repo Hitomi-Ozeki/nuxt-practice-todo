@@ -1,28 +1,23 @@
 <template>
   <div>
-    <h1>{{ todo.title }}</h1>
-    <div class="description">
-      {{ todo.description }}
+    <div v-for="todo in todos" :key="todo.id" class="todo-item">
+      <todo :todo="todo" />
     </div>
   </div>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from "nuxt-property-decorator"
-import { Todo } from "~/types/todo"
+import { Todo as ITodo } from "~/types/todo"
+import Todo from "~/components/KoinoSample/Todo.vue"
 
-Component({})
-export default class KoinoSample extends Vue {
-  @Prop({ type: Object, required: true })
-    todo!: Todo
+@Component({ components: { Todo } })
+export default class TodoList extends Vue {
+  @Prop({ type: Array, required: true })
+    todos!: ITodo[]
 }
 </script>
 <style lang="scss" scoped>
-.todo {
-  border: 1px solid black;
-  padding: 24px;
-}
-
-.description {
-  white-space: pre;
+.todo-item {
+  padding: 8px;
 }
 </style>
