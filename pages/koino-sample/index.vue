@@ -1,5 +1,12 @@
 <template>
-  <div><todo-list :todos="todos" /></div>
+  <div>
+    <div><todo-list :todos="todos" /></div>
+    <div>
+      <NuxtLink to="/koino-sample/new">
+        <button>追加</button>
+      </NuxtLink>
+    </div>
+  </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator"
