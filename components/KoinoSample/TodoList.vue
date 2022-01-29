@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="todo in todos" :key="todo.id" class="todo-item">
+    <div v-for="todo in todoFilted" :key="todo.id" class="todo-item">
       <todo :todo="todo" />
     </div>
   </div>
@@ -14,6 +14,10 @@ import Todo from "~/components/KoinoSample/Todo.vue"
 export default class TodoList extends Vue {
   @Prop({ type: Array, required: true })
     todos!: ITodo[]
+
+  get todoFilted () {
+    return this.todos.filter(t => !t.completed)
+  }
 }
 </script>
 <style lang="scss" scoped>
