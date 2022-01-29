@@ -9,7 +9,10 @@ export default class Todo extends VuexModule {
 
   @Mutation
   addTodo (todo: ITodo) {
-    this.data = this.data.concat(todo)
+    this.data = this.data.concat({
+      ...todo,
+      id: uuid(),
+    })
   }
 
   @Mutation

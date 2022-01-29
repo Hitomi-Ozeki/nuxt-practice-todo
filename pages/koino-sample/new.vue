@@ -27,7 +27,10 @@ export default class extends Vue {
   }
 
   edit (parts: Partial<Todo>) {
-    Object.assign(this.todo, parts)
+    this.todo = {
+      ...this.todo,
+      ...parts,
+    }
   }
 
   clickAdd () {
