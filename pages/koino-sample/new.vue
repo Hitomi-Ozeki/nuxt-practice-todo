@@ -6,6 +6,11 @@
         追加
       </button>
     </div>
+    <div>
+      <nuxt-link to="/koino-sample/">
+        戻る
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
