@@ -7,5 +7,5 @@
 import { Component, Vue } from "nuxt-property-decorator"
 
 @Component({})
-export default class KoinoSample extends Vue {}
+export default class practice3 extends Vue {}
 </script>
