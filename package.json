@@ -9,8 +9,7 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
-    "lint": "yarn lint:js --fix && yarn lint:style --fix",
-    "prepare": "husky install"
+    "lint": "yarn lint:js --fix && yarn lint:style --fix"
   },
   "dependencies": {
     "core-js": "^3.19.3",
@@ -33,8 +32,6 @@
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^8.2.0",
-    "husky": ">=6",
-    "lint-staged": ">=10",
     "lodash": "^4.17.21",
     "node-sass": "^6.0.0",
     "nuxt-property-decorator": "^2.9.1",
@@ -45,23 +42,5 @@
     "stylelint-config-recommended-vue": "^1.1.0",
     "stylelint-config-standard": "^24.0.0",
     "uuid": "^8.3.2"
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "npx prettier --write",
-      "eslint --ext \".js,.vue\"  --fix"
-    ],
-    "*.scss": [
-      "npx prettier --write",
-      "stylelint \"**/*.{scss}\" "
-    ],
-    "*.vue": [
-      "npx prettier --write",
-      "eslint --ext \".js,.vue\"  --fix",
-      "stylelint \"**/*.{vue}\" "
-    ],
-    "*.{json,yml,yaml}": [
-      "npx prettier --write"
-    ]
   }
 }
