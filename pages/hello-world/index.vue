@@ -7,5 +7,5 @@
 import { Component, Vue } from "nuxt-property-decorator"
 
 @Component({})
-export default class practice3 extends Vue {}
+export default class HelloWorld extends Vue {}
 </script>
