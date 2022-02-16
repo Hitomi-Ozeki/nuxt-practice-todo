@@ -9,6 +9,6 @@ import { Component, Vue } from "nuxt-property-decorator"
 
 @Component({})
 export default class HelloWorld extends Vue {
-    text='HelloWord！'
+  text = "HelloWord！"
 }
 </script>
