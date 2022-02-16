@@ -1,19 +1,19 @@
 <template>
-<div>
-    <div>
+　<div>
+   <div>
       <input v-model="message" type="text">
-  </div> 
-  <div>
+   </div> 
+　　<div>
       {{ message }} 
-    </div>
-   </div>
+　　</div>
+　</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator"
 @Component({})
 export default class HelloWorld extends Vue {
-    message:string = "ここに打ってください"
+    message:string = "ここに入力して下さい"
 }
 
 </script>
